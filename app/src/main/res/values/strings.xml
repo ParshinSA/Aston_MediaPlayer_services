@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MediaPlayer</string>
+    <string name="track_logotype">Track Logotype</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="back">Back</string>
+    <string name="nextTrack">Next</string>
+    <string name="contentDescription">Play Pause</string>
+    <string name="failedToStartedMediaPlayer">Failed to started MediaPlayer</string>
+    <string name="mediaPlayerNtfName">MediaPlayer</string>
+    <string name="mediaPlayerNtfDescription">Notifies the user when music is playing and provides player controls</string>
+    <string name="todo_00_00">00:00</string>
+    <string name="closePlayer">Close Player</string>
+    <string name="rationale_media_notofication">Для управления музыкой в фоне необходимо разрешение на показ уведомлений</string>
+</resources>

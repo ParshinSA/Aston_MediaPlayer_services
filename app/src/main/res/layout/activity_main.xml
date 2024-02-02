@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".presentation.MainActivity">
+
+    <ImageView
+        android:id="@+id/albumImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/track_logotype"
+        android:foreground="@drawable/foreground_track_logotype"
+        android:src="@drawable/ic_logo_mediaplayer"
+        app:layout_constraintBottom_toTopOf="@+id/lineTimeTracker"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lineTimeTracker" />
+
+    <TextView
+        android:id="@+id/trackTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/content_margin"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/lineTimeTracker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        tools:text="Important Declarations" />
+
+    <TextView
+        android:id="@+id/durationTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lineTimeTracker"
+        android:layout_marginTop="@dimen/content_margin"
+        android:text="@string/todo_00_00"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/lineTimeTracker"
+        app:layout_constraintTop_toBottomOf="@id/lineTimeTracker" />
+
+    <TextView
+        android:id="@+id/currentPositionTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_margin"
+        android:text="@string/todo_00_00"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/lineTimeTracker"
+        app:layout_constraintTop_toBottomOf="@id/lineTimeTracker" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/lineTimeTracker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_margin"
+        android:layout_marginEnd="@dimen/content_margin"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlayPause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnBack"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorPrimary"
+        android:contentDescription="@string/back"
+        android:src="@drawable/ic_backward"
+        app:fabCustomSize="36dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnPlayPause"
+        app:layout_constraintEnd_toStartOf="@id/btnPlayPause"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnPlayPause" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnPlayPause"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_margin"
+        android:layout_marginEnd="@dimen/content_margin"
+        android:layout_marginBottom="64dp"
+        android:contentDescription="@string/contentDescription"
+        android:src="@drawable/ic_pause_track"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnNext"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/btnBack" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnNext"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorPrimary"
+        android:contentDescription="@string/nextTrack"
+        android:src="@drawable/ic_next_track"
+        app:fabCustomSize="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPlayPause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/btnPlayPause"
+        app:layout_constraintTop_toTopOf="@+id/btnPlayPause" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
